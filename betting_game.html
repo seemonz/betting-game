@@ -3,25 +3,36 @@
 <head>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="bet_game.js"></script>
+
+  <link rel="stylesheet" href="bet.css">
 </head>
-
 <body>
-  <h3>Lets play a Betting Game!</h3>
-  <hr>
-  <p>Wallet:</p>
-  <p id="wallet"></p>
-  <hr>
-  <p>bet</p>
-  <div><input id="bet" value=""></div>
-  <p>guess</p>
-  <div><input id="guess" value=""></div>
-
-  <button id="game">Start</button>
-  <button id="reset-game"><a href="betting_game.html">Restart</a></button>
-
-  <div id="outputLineOne"></div>
-  <div id="outputLineTwo"></div>
-
+  <div class="wallet-div">
+    <h1 id="wallet"></h1>
+  </div>
   
+  <div class="container">
+
+    <div class="bet">
+      <h1>Place your Money</h1>
+      <input id="bet" placeholder="$">
+    </div>
+
+     <div class="buttons">
+      <button id="game">Bet</button>
+      <button id="reset-game"><a href="betting_game.html">Re</a></button>
+    </div>
+  
+    <div class="guess">
+      <h1>Guess a Number</h1>
+      <input id="guess" placeholder="#">
+    </div>
+
+  </div>
+
+  <div class="output-text">
+    <div id="outputLineOne"></div>
+    <div id="outputLineTwo"></div>
+  </div>
 </body>
 </html>

@@ -29,7 +29,7 @@ $(function() {
 
 
   function walletRefresh(currentWallet) {
-    $('#wallet').text('$' + currentWallet);
+    $('#wallet').text('Wallet: $' + currentWallet);
   }
 
   // game logic
