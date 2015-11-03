@@ -51,16 +51,13 @@ $(function() {
     if(guess === randomNum) {
       oriWallet = oriWallet + bet;
       $('#outputLineOne').text('you won $' + bet);
-      $('#outputLineTwo').text('your wallet is now $' +oriWallet);
     }
     else if((guess + 1) === randomNum || (guess - 1) === randomNum) { // TODO abs value refactor
       $('#outputLineOne').text('you were off by one, you dont win or lose.');
-      $('#outputLineTwo').text('your wallet is ' + oriWallet);
     }
     else {
       oriWallet = oriWallet - bet;
       $('#outputLineOne').text('you lost $' + bet + ' the answer was ' + randomNum);
-      $('#outputLineTwo').text('your wallet is $' + oriWallet); 
     }
   }
 
@@ -68,7 +65,7 @@ $(function() {
   walletRefresh(oriWallet);
 
    // start game
-  $( '#game' ).click(function() {
+  $( '#game' ).on('click', function() {
     betGame();
     walletRefresh(oriWallet);
   });
